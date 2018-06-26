@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+  font: 14px "Trebuchet MS", Futura, sans-serif;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -12,6 +20,7 @@
   height: 150px;
   padding: 20px;
   color: white;
+  width: 100%;
 }
 
 .App-title {
