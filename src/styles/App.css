@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
-  font: 14px "Trebuchet MS", Futura, sans-serif;
+  font: 14px 'Trebuchet MS', Futura, sans-serif;
+}
+
+body {
+  background: #9a9999;
 }
 
 .App {
@@ -32,6 +36,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

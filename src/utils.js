@@ -1,19 +1,19 @@
-export const calculateWinner = (squares) => {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
+export const calculateWinner = (
+  x_hor,
+  x_ver,
+  x_diag1,
+  x_diag2,
+  o_hor,
+  o_ver,
+  o_diag1,
+  o_diag2
+) => {
+  if (x_hor >= 5 || x_ver >= 5 || x_diag1 >= 5 || x_diag2 >= 5) {
+    return 'x';
   }
-  return null;
-}
+
+  if (o_hor >= 5 || o_ver >= 5 || o_diag1 >= 5 || o_diag2 >= 5) {
+    return 'o';
+  }
+  return;
+};

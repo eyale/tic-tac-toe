@@ -1,1 +1,2 @@
-export const BOARD_SIZE = 15;
+export const BOARD_ROW_SIZE = 15;
+
