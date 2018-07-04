@@ -1,7 +1,6 @@
 import React from 'react';
 import Square from './Square';
-import { BOARD_ROW_SIZE } from '../constants';
-import { calculateWinner } from '../utils';
+import { calculateWinner, generateEmptyBoard } from '../utils';
 
 import '../styles/tic-tac-toe.css';
 
@@ -9,17 +8,12 @@ export class Board extends React.Component {
   state = {
     isX: true,
     winner: '',
-    grid: [...Array(BOARD_ROW_SIZE)]
-      .fill()
-      .map(x => [...Array(BOARD_ROW_SIZE)].fill(''))
+    grid: generateEmptyBoard(),
   };
 
   onReset = () => {
-    let emptyGrid = [...Array(BOARD_ROW_SIZE)]
-      .fill()
-      .map(x => [...Array(BOARD_ROW_SIZE)].fill(''));
     this.setState({
-      grid: emptyGrid,
+      grid: generateEmptyBoard(),
       winner: ''
     });
   };

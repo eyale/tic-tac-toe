@@ -1,13 +1,6 @@
-export const calculateWinner = (
-  x_hor,
-  x_ver,
-  x_diag1,
-  x_diag2,
-  o_hor,
-  o_ver,
-  o_diag1,
-  o_diag2
-) => {
+import { BOARD_ROW_SIZE } from './constants';
+
+export const calculateWinner = (x_hor, x_ver, x_diag1, x_diag2, o_hor, o_ver, o_diag1, o_diag2) => {
   if (x_hor >= 5 || x_ver >= 5 || x_diag1 >= 5 || x_diag2 >= 5) {
     return 'x';
   }
@@ -17,3 +10,5 @@ export const calculateWinner = (
   }
   return;
 };
+
+export const generateEmptyBoard = () => [...Array(BOARD_ROW_SIZE)].fill().map(x => [...Array(BOARD_ROW_SIZE)].fill(''));
